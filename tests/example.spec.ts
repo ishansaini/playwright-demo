@@ -22,6 +22,7 @@ test.describe("navigation", () => {
 test('todo mvc', async ( {page} ) => {
   await page.goto('https://demo.playwright.dev/todomvc');
 
+
   const TODO_ITEMS = [
     'buy some cheese',
     'feed the cat',
@@ -35,7 +36,7 @@ test('todo mvc', async ( {page} ) => {
   await newTodo.fill(TODO_ITEMS[0]);
   await newTodo.press('Enter');
 
-  // Make sure the list only has one todo item.
+  // Make sure the list only has one todo .
   await expect(page.getByTestId('todo-title')).toHaveText([
     TODO_ITEMS[0]
   ]);
