@@ -39,7 +39,7 @@ jobs:
         echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "📊 [Download full HTML report from artifacts below]" >> $GITHUB_STEP_SUMMARY
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v5
       if: always()
       with:
         name: playwright-report
